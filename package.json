@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon index.js",
-    "start": "node index.js",
+    "start": "export NODE_ENV=production && node index.js",
     "db:migrate:dev": "export NODE_ENV=development && npx sequelize db:migrate"
   },
   "author": "",
