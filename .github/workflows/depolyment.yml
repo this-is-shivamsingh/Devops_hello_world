@@ -30,3 +30,6 @@ jobs:
          cd env
          touch .env.production
          echo "${{ secrets.PRODUCTION_ENV }}" > .env.production
+    - run: |
+         make prod-build
+         make up-prod
