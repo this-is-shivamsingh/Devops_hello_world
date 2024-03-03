@@ -27,5 +27,6 @@ jobs:
     - run: npm ci
     - run: |
          mkdir env
+         cd env
          touch .env.production
-
+         echo "${{ secrets.PRODUCTION_ENV }}" > .env.production
