@@ -7,7 +7,7 @@ const app = express()
 
 app.get('/select', async (req, res) => {
   const _users = await User.findAll()
-  res.send(`All Users - \n ${JSON.stringify(_users)}`)
+  res.send(`All Users Details :- \n ${JSON.stringify(_users)}`)
 })
 
 function getRandomInt(min, max) {
