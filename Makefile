@@ -13,6 +13,9 @@ up:
 up-prod:
 	docker compose --env-file ./env/.env.production up
 
+up-prod-deattached:
+	docker compose --env-file ./env/.env.production up -d
+
 up-deattached:
 	docker compose --env-file ./env/.env.development up -d
 
