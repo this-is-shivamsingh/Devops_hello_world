@@ -26,11 +26,9 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: |
-         echo $USER
          mkdir env
          cd env
          touch .env.production
          echo "${{ secrets.PRODUCTION_ENV }}" > .env.production
-    - run: |
-         make prod-build
-         make up-prod
+    - run: make prod-build
+    - run: make up-prod-deattached
